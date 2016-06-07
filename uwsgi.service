@@ -1,0 +1,9 @@
+[Unit]
+After = network.target
+
+[Service]
+WorkingDirectory = /var/web
+ExecStart = /var/web/env/bin/uwsgi uwsgi.ini
+
+[Install]
+WantedBy = multi-user.target
